@@ -1,0 +1,12 @@
+﻿#parallax-image{
+    background-image:url("../images/bgimages/parallaxbg.png");
+    height:500px;
+    margin-bottom:50px;
+    background-attachment:fixed;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+
+
+

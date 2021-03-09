@@ -1,0 +1,176 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="ProjectWintaxSolutions.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <%--bootstrap css--%>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <%--datatable css--%>
+    <link href="datatable/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <%--fontawesome css--%>
+    <link href="fontawesome/css/all.css" rel="stylesheet" />
+    <%--custom css--%>
+    <link href="css/customstylesheet.css" rel="stylesheet" />
+    <%--card hover--%>
+    <link href="css/hover-style.css" rel="stylesheet" />
+
+    <%--jquery--%>
+    <script src="bootstrap/js/jquery-3.5.1.slim.min.js"></script>
+    <%--popper js--%>
+    <script src="bootstrap/js/popper.min.js"></script>
+    <%--bootstrap js--%>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <%--datatables js--%>
+    <script src="datatable/js/jquery.dataTables.min.js"></script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+
+        <style>
+            #load{
+    width:100%;
+    height:100%;
+    position:fixed;
+    z-index:9999;
+    background:url("../images/preloader.gif") no-repeat center center rgba(255,255,255,255)
+
+}
+        </style>
+        <script>
+            document.onreadystatechange = function () {
+                var state = document.readyState
+                if (state == 'interactive') {
+                    document.getElementById('form1').style.visibility = "hidden";
+                }
+                else if (state == 'complete') {
+                    setTimeout(function () {
+                        document.getElementById('interactive');
+                        document.getElementById('load').style.visibility = "hidden";
+                        document.getElementById('form1').style.visibility = "visible";
+
+                    }, 2000);
+                }
+            }
+        </script>
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a href="homepage.aspx">
+                <img src="images/wintaxlogo.png" /></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link " href="homepage.aspx">Home</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link " href="enquiry.aspx">Enquiry</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">Downlaods</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Setup</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Drivers</a>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <asp:LinkButton class="nav-link" ID="linkLogin" runat="server" PostBackUrl="~/calogin.aspx" >Login</asp:LinkButton>                        
+                    </li>
+                    <li class="nav-item active">
+                        <asp:LinkButton class="nav-link" ID="linkName" runat="server" >
+                            <asp:Label  ID="lblName" runat="server" Text="hello" Visible="false"></asp:Label>
+                        </asp:LinkButton>                        
+                    </li>
+                    <li class="nav-item active">
+                        <asp:LinkButton class="nav-link" ID="linkLogout" runat="server" OnClick="linkLogout_Click" Visible="false" >Log Out</asp:LinkButton>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+
+
+        <div>
+            <div id="load"></div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <footer class="footer-sec">
+            <div class="footer-top">
+                <div class="container-fluid mx-auto ">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h3 class="foot-title">Quick Links</h3>
+                            <ul>
+                                <li>
+                                    <span><i class="fas fa-angle-double-right"></i></span><span><a href="dowloaddriver.aspx" rel="nofollow">Download Drivers</a></span></li>
+                                <li>
+                                    <span><i class="fas fa-angle-double-right"></i></span><span><a href="downloadsetup.aspx" rel="nofollow">Download Setup</a></span></li>
+                                <li>
+                                    <span><i class="fas fa-angle-double-right"></i></span><span><a href="bankdetails.aspx">Bank Details</a></span></li>
+                            </ul>
+                        </div>
+
+
+                        <div class="col-md-4 ">
+                            <h3 class="foot-title">PRODUCT SUPPORT</h3>
+                            <ul>
+                                <li>
+                                    <span><i class="fas fa-phone-square-alt"></i></span><span class="ftcl"><a href="tel:+919833998311" rel="nofollow">+91 9833998311 </a></span></li>
+                                <li>
+                                    <span><i class="fas fa-phone-square-alt"></i></span><span class="ftcl"><a href="tel:+919833918311" rel="nofollow">+91 9833918311 </a></span></li>
+
+                                <li>
+                                    <i class="fas fa-at"></i><span class="ftcl"><a href="mailto:chavan.dsc@gmail.com" rel="nofollow">chavan.dsc@gmail.com</a></span></li>
+                            </ul>
+                            <div class="foot-holiday">
+                                <p>
+                                    <strong>Office Time</strong>
+                                    <span>10:00 AM  5:00 PM (Mon-Sat)
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 ">
+                            <h3 class="foot-title">CONTACT INFO</h3>
+                            <ul>
+                                <li>
+                                    <span><i class="fas fa-map-marker-alt"></i></span><span class="ftcl"><a href="https://goo.gl/maps/5x7e2j6J1ys4q1nG8https://goo.gl/maps/5x7e2j6J1ys4q1nG8"><span class="address-ft">Wintax Solutions
+                                        1-A, Gr.Flr, Savitri Sadan, Sharma Compound,
+                                        Old Nagardas Road, Axis/HDFC Bank, 
+                                        Behind Jain Sweets,
+                                        Andheri East, Mumbai - 400 069
+                                        <br>
+                                    </span></a></span>
+                                </li>
+                                <li><strong>GSTIN:</strong> 27AEXPC3397K1ZR </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row footbotp container-fluid">
+                        <div class="col-md-6">
+                            <ul class="footer-social-icon">
+                                <li class="facebook"><i class="fab fa-facebook"></i><span class="ftcl"><a href="https://www.facebook.com/">Facebook</a></span></li>
+                                <li class="wa"><span class="ftcl"><a href="www.wa.me/+919833918311"><i class="fab fa-whatsapp"></i>WhatApp</a></span></li>
+                                <li class="youtube"><span class="ftcl"><a href="www.youtube.com"><i class="fab fa-youtube"></i>Youtube</a></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+    </form>
+</body>
+</html>

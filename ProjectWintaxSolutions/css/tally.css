@@ -1,0 +1,199 @@
+﻿#lottieYourGrowthPartner, #lottieBetterControlOverFlowCash, #lottieImprovedProductivity, #lottieBetterTaxCompliance {
+    height: 200px !important;
+}
+
+@media screen and (max-width: 576px) {
+    /*.section-margin-top {
+                margin-top: 90px;
+            }*/
+    .section-pad {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .key-benifits, .help-me-decide {
+        padding-top: 5px !important;
+    }
+}
+
+body {
+    background-color: transparent;
+    background-image: url(/wp-content/themes/tally/assets/images/tally-prime/product-bg.png);
+    background-size: contain;
+    background-position: 50px -50px;
+    background-repeat: no-repeat;
+}
+
+.activebg {
+    background-color: #ffffff !important;
+    border-bottom: 1px solid rgba(175,188,205,.12) !important;
+}
+
+#navbar-template #navbar-custom {
+    background-color: transparent;
+    border-bottom: 0;
+}
+
+.headings {
+    color: #000000;
+    font-size: 44px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.grad-btn {
+    position: relative;
+    padding-top: 40px;
+    width: 400px;
+}
+
+.btnbtn .badge-btn {
+    color: #fff;
+    background-color: #FF2507;
+    border-radius: 17px;
+    padding: 10px 6px;
+    text-transform: uppercase;
+    position: inherit;
+    margin: 2px 10px 2px 2px;
+}
+
+.btn-notify {
+    background-color: #43596C;
+    padding: 0;
+    border-radius: 20px;
+    text-align: left;
+    margin: 0 0 20px 0;
+    font-size: 13px;
+    font-weight: normal;
+}
+
+    .btn-notify a {
+        color: #ffffff;
+        display: inline-block;
+    }
+
+.cta-notify {
+    float: right;
+    min-height: auto;
+    font-size: 14px;
+    margin: 2px;
+    padding: 5px 25px;
+    color: #333 !important;
+    font-size: 13px;
+    font-weight: normal;
+}
+
+.card-body {
+    padding: 1.25rem 1.25rem 0 1.25rem;
+}
+
+.key-benifits .btn-blue {
+    background-color: #ffffff;
+    border: 2px solid #FCD275;
+    color: #000000;
+}
+
+.help-me-decide {
+    background-color: #F9FAFE;
+}
+
+.pricing .card {
+    border: 1px solid #dbdfef;
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(201,201,201,1);
+    -moz-box-shadow: 0px 0px 15px 0px rgba(201,201,201,1);
+    box-shadow: 0px 0px 15px 0px rgba(201,201,201,1);
+    border-radius: 1rem;
+}
+
+.card-price-text {
+    color: #191919;
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.pricing .card-body {
+    padding: 1.25rem;
+}
+
+.card-heading-text {
+    text-align: center;
+    font-size: 1rem;
+    margin: 1rem 0 0.25rem 0;
+}
+
+.border-hd {
+    margin: 0 auto;
+    border: 2px solid #ABD3EF;
+    width: 12%;
+}
+
+.price-head {
+    padding-top: 3rem;
+}
+
+.bg-color4 {
+    background-color: #A0CDEC;
+}
+
+.btn-yellow {
+    display: inline-block;
+    min-height: auto;
+    padding: 5px 25px;
+}
+
+.section-pad {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+#breadcrumbs {
+    display: none;
+}
+
+.banner-top-img-prime {
+    margin-top: 80px !important;
+}
+
+.diamond-img img {
+    max-height: 240px;
+}
+
+.btn-blue {
+    padding: 8px 20px;
+}
+
+.ctaSecondBtn {
+    background: none;
+    border: 1px solid #ffc632;
+}
+
+@media screen and (max-width: 576px) {
+    body {
+        background-image: none;
+    }
+
+    .next-smbl {
+        display: block;
+    }
+
+    .cta-notify {
+        display: none !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .sectionImg {
+        width: 50%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .sectionImg {
+        width: 38%;
+    }
+}
+
+.prime-logo {
+    height: 40px;
+}
